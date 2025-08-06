@@ -9,12 +9,12 @@ linux-firmware
 linux-headers
 ntfs-3g
 os-prober
-pciutils
 "
 drivers=$(clean "$drivers")
 
 # Services
 services="
+cronie
 dbus
 elogind
 tlp
@@ -39,10 +39,9 @@ magic-wormhole
 micro
 openssl
 7zip
-7zip-unrar
+unrar
 q
 ripgrep
-stow
 wget
 xxd
 yq
@@ -61,16 +60,16 @@ cloud=$(clean "$cloud")
 
 # Dev
 dev="
-binutils
 base-devel
 strace
 ltrace
-upx
 gdb
 go
 rizin
 rz-ghidra
 sqlite
+typst
+upx
 "
 dev=$(clean "$dev")
 
@@ -87,10 +86,9 @@ xdg-user-dirs
 xf86-video-dummy
 xf86-video-fbdev
 xinput
-xone
 xorg-input-drivers
 xorg-minimal
-xpadneo
+xprop
 xrandr
 xset
 "
@@ -132,6 +130,8 @@ libstdc++-32bit
 mesa-32bit
 mesa-dri-32bit
 mono
+xone
+xpadneo
 gstreamer1
 gstreamer-vaapi
 steam
