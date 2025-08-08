@@ -126,8 +126,10 @@ The games build adds:
 * sqlite: embeddable SQL database
 * upx: compresses binaries
 * void-artwork and removed-packages: artwork and cleanup scripts
+* nginx and caddy: reverse proxies
+* certbot-nginx: certbot nginx plugin
 * docker(including buildx, compose): containers
-* kubernetes: containers orchestration
+* k3d: containers orchestration
 * terraform: infrastructure as code
 * ncurses: famous TUI library
 * patch: applies diffs to source files
@@ -206,7 +208,6 @@ Every new standard user including the one created with the installer...
 * [Mononoki](https://madmalik.github.io/mononoki/)
 * [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
 * [Monoid](https://larsenwork.com/monoid/)
-* [Iosovka](https://typeof.net/Iosevka/)
 * [Fira Code](https://github.com/tonsky/FiraCode/)
 > [!TIP]
 > These are commercial alternatives which look great, but I will never pay for(probably)

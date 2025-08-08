@@ -50,10 +50,13 @@ utilities=$(clean "$utilities")
 
 # Cloud
 cloud="
+nginx
+certbot-nginx
+caddy
 docker
 docker-buildx
 docker-compose
-kubernetes
+k3d
 terraform
 "
 cloud=$(clean "$cloud")
@@ -96,11 +99,7 @@ xorg=$(clean "$xorg")
 
 # Fonts
 fonts="
-noto-fonts-cjk
-noto-fonts-emoji
 noto-fonts-ttf
-noto-fonts-ttf-extra
-noto-fonts-ttf-variable
 "
 fonts=$(clean "$fonts")
 
@@ -123,19 +122,11 @@ bluetooth=$(clean "$bluetooth")
 games="
 void-repo-multilib
 void-repo-multilib-nonfree
-libdrm-32bit
-libgcc-32bit
-libglvnd-32bit
-libstdc++-32bit
-mesa-32bit
-mesa-dri-32bit
-mono
 xone
 xpadneo
 gstreamer1
 gstreamer-vaapi
-steam
-steam-udev-rules
+SDL2
 "
 
 # Minimal
@@ -159,6 +150,7 @@ sudo ./mkiso.sh -a x86_64 -b base \
     -e /bin/bash \
 	-I ./custom \
     -I ./custom/graphics.sh \
+    -I ./custom/fonts.sh \
     -S "dhcpcd crond tlp dbus elogind" \
     -C "vconsole.keymap=us" 
 
@@ -175,5 +167,7 @@ sudo ./mkiso.sh -a x86_64 -b base \
     -e /bin/bash \
 	-I ./custom \
     -I ./custom/graphics.sh \
+    -I ./custom/fonts.sh \
+    -I ./custom/games.sh \
     -S "dhcpcd crond tlp dbus elogind" \
     -C "vconsole.keymap=us" 

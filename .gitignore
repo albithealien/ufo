@@ -15,3 +15,7 @@ release/
 packer/cloud-*/
 packer/vagrant-*/
 mklive-build*/
+
+.env*
+.vscode
+.DS_Store

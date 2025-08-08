@@ -4,8 +4,9 @@ stty -ixon
 [[ $- != *i* ]] && return
 
 # Environment
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 7)\][\w]\[$(tput setaf 7)\]\$ \[$(tput sgr0)\]"
-export export HISTSIZE= HISTFILESIZE=
+PS1="\[$(tput bold)\]\[$(tput setaf 1)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 7)\][\w]\[$(tput setaf 7)\]\$ \[$(tput sgr0)\]"
+export HISTSIZE= HISTFILESIZE=
+export LESSHISTFILE=
 export EDITOR="vi" VISUAL="vi"
 export PATH="$PATH:~/go/bin"
 
@@ -34,7 +35,7 @@ alias df="df -h"
 alias nano="micro"
 
 # Bindings
-bind '"\C-t": edit-and-execute-command'
+bind '"\C-o": edit-and-execute-command'
 
 # Attaching to a tmux session!
 # tmux attach-session -t name || tmux new-session -s name
